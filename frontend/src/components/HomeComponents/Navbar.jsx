@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
-import { close, menu } from '../assets';
-import {AGT} from '../assets';
+import { close, menu } from '../../assets';
+import {AGT} from '../../assets';
 import { navLinks } from '../constants';
 
 const Navbar = () => {
