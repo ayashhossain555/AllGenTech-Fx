@@ -1,5 +1,5 @@
 import styles from "../style";
-import { AGT } from "../assets";
+import { AGT } from "../../assets";
 import { footerLinks, socialMedia } from "../constants";
 
 const Footer = () => (

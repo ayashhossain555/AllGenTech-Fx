@@ -1,54 +1,35 @@
-import styles from "./style";
-import {
-  Navbar,
-  Hero,
-  Business,
-  Billing,
-  Testimonials,
-  Clients,
-  CTA,
-  Footer,
-} from "./components";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import AdminLoginAccess from "./components/AdminLogin/AdminLoginAccess";
+import PrivateAdminRoute from "./utils/PrivateAdminRoute";
+import RedirectRoutes from "./utils/RedirectRoutes";
+import AdminLogin from "./components/AdminLogin/AdminLogin";
+import Register from "./components/Client/Register";
+import Login from "./components/Client/Login";
+import Profile from "./components/Client/Profile";
+import { Toaster } from "react-hot-toast";
 
 const App = () => (
-  <div className="bg-cyan-500 w-full overflow-hidden">
-    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Navbar />
-      </div>
-    </div>
+  <div>
+    <Routes>
+      {/* Public routes */}
+      <Route path="/" element={<Home />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/adminLogin" element={<AdminLoginAccess />} />
 
-    <div className={`bg-cyan-500 ${styles.flexStart}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Hero />
-      </div>
-    </div>
+      {/* Private routes that require authentication */}
+      <Route element={<PrivateAdminRoute />}>
+        <Route path="/admin" element={<AdminLogin />} />
+      </Route>
 
-    <div className={`bg-slate-50 ${styles.paddingX} ${styles.flexStart}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Clients />
-        <Billing />
-      </div>
-    </div>
-    <div className={`bg-cyan-100 ${styles.paddingX} ${styles.flexStart}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Testimonials />
-      </div>
-    </div>
-    <div className={`bg-slate-50 ${styles.paddingX} ${styles.flexStart}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Business />
-        <CTA />
-      </div>
-    </div>
-
-    <div
-      className={`bg-black-gradient-2 ${styles.paddingX} ${styles.flexStart}`}
-    >
-      <div className={`${styles.boxWidth}`}>
-        <Footer />
-      </div>
-    </div>
+      {/* Routes that redirect based on auth status */}
+      <Route element={<RedirectRoutes />}>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Route>
+    </Routes>
+    <Toaster />
   </div>
 );
 
