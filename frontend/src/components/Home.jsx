@@ -17,6 +17,8 @@ const Home = () => (
         <Navbar />
       </div>
     </div>
+    {/* A  margin bottom of 40px for medium screens and 10px for large screens */}
+    <div className="mb-40 md:mb-10" />
 
     <div className={`bg-cyan-500 ${styles.flexStart}`}>
       <div className={`${styles.boxWidth}`}>
@@ -42,7 +44,9 @@ const Home = () => (
       </div>
     </div>
 
-    <div className={`bg-black-gradient-2 ${styles.paddingX} ${styles.flexStart}`}>
+    <div
+      className={`bg-black-gradient-2 ${styles.paddingX} ${styles.flexStart}`}
+    >
       <div className={`${styles.boxWidth}`}>
         <Footer />
       </div>
