@@ -46,6 +46,16 @@
   );
 }
 
+.bg-teal-gradient {
+  background: linear-gradient(
+    157.81deg,
+    #004d40 -43.27%,
+    #00796b -21.24%,
+    #009688 12.19%,
+    #33bbcf 90.29%
+  );
+}
+
 .bg-black-gradient {
   background: linear-gradient(
     144.39deg,
@@ -117,7 +127,6 @@
 }
 
 .feedback-card {
-
   background: #ffffff;
 }
 
@@ -133,6 +142,11 @@
 .pink__gradient {
   background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
   filter: blur(900px);
+}
+
+.cyan__gradient {
+  background: linear-gradient(90deg, #7ff5f5 10%, #49c2e6 100%);
+  filter: blur(350px);
 }
 
 .white__gradient {

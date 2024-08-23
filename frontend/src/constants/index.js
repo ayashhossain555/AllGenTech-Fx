@@ -13,29 +13,29 @@ import {
   send,
   shield,
   star,
-} from "../../assets";
+} from "../assets";
 
 export const navLinks = [
   {
-      id: "/",
+    id: "home",
     title: "Home",
   },
   {
-    id: "services",
-    title: "Services",
+    id: "landings",
+    title: "Landings",
   },
   {
-    id: "whoweare",
-    title: "Who We Are",
+    id: "pages",
+    title: "Pages",
   },
   {
-    id: "contactus",
-    title: "Contact Us",
+    id: "docs",
+    title: "Docs",
   },
-  // {
-  //   id: "help",
-  //   title: "Help",
-  // },
+  {
+    id: "help",
+    title: "Help",
+  },
 ];
 
 export const features = [
@@ -65,28 +65,32 @@ export const features = [
 export const feedback = [
   {
     id: "feedback-1",
-    content: "Follow a hashtag growth total posts, videos and images.",
+    content:
+      "Follow a hashtag growth total posts, videos and images.",
     name: "Hashtag Growth",
     title: "Founder & Leader",
     img: people01,
   },
   {
     id: "feedback-2",
-    content: "Identify the most influential people posting with your hashtag.",
+    content:
+      "Identify the most influential people posting with your hashtag.",
     name: "Influencers by Hashtag",
     title: "Founder & Leader",
     img: people02,
   },
   {
     id: "feedback-3",
-    content: "See the most influential posts on hashtag you are following on.",
+    content:
+      "See the most influential posts on hashtag you are following on.",
     name: "Most Influental Post",
     title: "Founder & Leader",
     img: people03,
   },
   {
-    id: "feedback-4",
-    content: "Visualize where people are posting using your hashtag made.",
+    id: "feedback-3",
+    content:
+      "Visualize where people are posting using your hashtag made.",
     name: "Hashtag Location",
     title: "Founder & Leader",
     img: people01,
@@ -216,65 +220,5 @@ export const clients = [
   {
     id: "client-4",
     logo: dropbox,
-  },
-];
-
-export const services = [
-  {
-    id: "service-1",
-    title: "Web Development",
-    content: "We provide the best web development services for your business.",
-    icon: shield,
-  },
-  {
-    id: "service-2",
-    title: "Mobile Development",
-    content:
-      "We provide the best mobile development services for your business.",
-    icon: send,
-  },
-  {
-    id: "service-3",
-    title: "SEO Optimization",
-    content: "We provide the best SEO optimization services for your business.",
-    icon: star,
-  },
-];
-
-// content, name, title, img
-export const coreValues = [
-  {
-    id: "core-value-1",
-    name: "Integrity",
-    title: "Founder & Leader",
-    content:
-      "Commitment to uphold honesty, transparency, and ethical behavior in all aspects.",
-    img: people01,
-  },
-
-  {
-    id: "core-value-2",
-    name: "Innovation",
-    title: "Founder & Leader",
-    content:
-      "Emphasizing on the creativity, experimentation, and continuous improvement.",
-    img: people02,
-  },
-
-  {
-    id: "core-value-3",
-    name: "Agility",
-    title: "Founder & Leader",
-    content:
-      "Highlighting the flexibility, responsiveness, and adaptability in a fast-paced environment.",
-    img: people03,
-  },
-  {
-    id: "core-value-4",
-    name: "Sustainability",
-    title: "Founder & Leader",
-    content:
-      "Fostering long-term viability and ethical stewardship, ensuring company's growth in global community",
-    img: people01,
   },
 ];

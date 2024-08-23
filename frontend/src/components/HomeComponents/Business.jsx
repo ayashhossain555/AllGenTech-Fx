@@ -1,5 +1,7 @@
 import { features } from "../constants";
 import styles, { layout } from "../style";
+import { BusinessProps } from "./types";
+
 const Business = () => {
   const FeatureCard = ({ icon, title, content, index }) => (
     <div
@@ -38,7 +40,6 @@ const Business = () => {
           voluptatibus ab sit. Iusto, saepe vel. Quae assumenda debitis
           corporis.
         </p>
-      
       </div>
 
       <div className={`${layout.sectionImg} flex-col`}>
@@ -49,5 +50,6 @@ const Business = () => {
     </section>
   );
 };
+Business.propTypes = BusinessProps;
 
 export default Business;
